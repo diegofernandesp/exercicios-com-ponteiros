@@ -25,7 +25,7 @@ implementation
 
 {$R *.dfm}
 
-uses uItem;
+uses uItem, uPedido;
 
 procedure TForm1.ImprimirItensMemo;
 var
@@ -39,9 +39,13 @@ end;
 
 procedure TForm1.ToolButton1Click(Sender: TObject);
 begin
+  CarregarPedidos;
   CarregarItens;
+
   ImprimirItensMemo;
+
   DescarregarItens;
+  DescarregarPedidos;
 end;
 
 end.

@@ -3,7 +3,8 @@ program ExerciciosPonteiros;
 uses
   Vcl.Forms,
   uPrincipal in 'uPrincipal.pas' {Form1},
-  uItem in 'uItem.pas';
+  uItem in 'uItem.pas',
+  uPedido in 'uPedido.pas';
 
 {$R *.res}
 
