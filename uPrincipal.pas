@@ -25,7 +25,7 @@ implementation
 
 {$R *.dfm}
 
-uses uItem, uPedido;
+uses uItem, uPedido, uItemPedido;
 
 procedure TForm1.ImprimirItensMemo;
 var
@@ -33,17 +33,19 @@ var
 begin
   memoLog.Lines.Clear;
 
-  for I := Low(Items) to High(Items) do
-    memoLog.Lines.Add(Items[I].ToString);
+  for I := Low(ItensPedido) to High(ItensPedido) do
+    memoLog.Lines.Add(ItensPedido[I].ToString);
 end;
 
 procedure TForm1.ToolButton1Click(Sender: TObject);
 begin
   CarregarPedidos;
   CarregarItens;
+  CarregarItensPedido;
 
   ImprimirItensMemo;
 
+  DescarregarItensPedido;
   DescarregarItens;
   DescarregarPedidos;
 end;

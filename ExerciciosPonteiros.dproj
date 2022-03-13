@@ -104,6 +104,7 @@
         </DCCReference>
         <DCCReference Include="uItem.pas"/>
         <DCCReference Include="uPedido.pas"/>
+        <DCCReference Include="uItemPedido.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

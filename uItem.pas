@@ -7,7 +7,6 @@ uses
 
 type
   TItem = record
-    Pedido: PPedido;
     Codigo: String;
     Descricao: String;
     function ToString: String;
@@ -27,13 +26,11 @@ procedure CarregarItens;
 begin
   SetLength(Items, 1);
   New(Items[0]);
-  Items[0]^.Pedido := @Pedidos[0]^;
   Items[0]^.Codigo := '001';
   Items[0]^.Descricao := 'Primeiro Item';
 
   SetLength(Items, 2);
   New(Items[1]);
-  Items[1]^.Pedido := @Pedidos[1]^;
   Items[1]^.Codigo := '002';
   Items[1]^.Descricao := 'Segundo Item';
 end;
@@ -50,8 +47,8 @@ end;
 
 function TItem.ToString: String;
 begin
-  Result := Format('Pedido: %s - Data: %S - Codigo: %s - Descrição: %s',
-    [Pedido.Numero, FormatDateTime('dd/MM/yyyy', Pedido.Data), Codigo, Descricao]);
+  Result := Format('Codigo: %s - Descrição: %s',
+    [Codigo, Descricao]);
 end;
 
 end.

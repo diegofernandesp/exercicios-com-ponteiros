@@ -4,7 +4,8 @@ uses
   Vcl.Forms,
   uPrincipal in 'uPrincipal.pas' {Form1},
   uItem in 'uItem.pas',
-  uPedido in 'uPedido.pas';
+  uPedido in 'uPedido.pas',
+  uItemPedido in 'uItemPedido.pas';
 
 {$R *.res}
 
